@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leeum header</title>
-
+    <!-- Script Jquery's JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Link Font Awesome's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- Link Inner's CSS -->
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -86,102 +89,124 @@
                     </nav>
                     <div class="btn-box">
                         <div class="leng">
-                            <span>ENG</span><span>KOR</span>
+                            <span class="active">ENG</span><span>KOR</span>
                         </div>
                         <div class="login">
                             <span>로그인</span>
                         </div>
+                        <div class="hbg-box">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="sub-menu-bar"></div>
             <div class="side-menu-bar">
-                <nav class="menu-box">
-                    <ul>
-                        <li>
-                            <a href="#"><span>전시</span></a>
-                            <ul>
-                                <li><a href="#">현대전시</a></li>
-                                <li><a href="#">예정전시</a></li>
-                                <li><a href="#">과거전시</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>소장품</span></a>
-                            <ul>
-                                <li><a href="#">고미술</a></li>
-                                <li><a href="#">현대미술</a></li>
-                                <li><a href="#">보존</a></li>
-                                <li><a href="#">수어해설</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>배움/연구</span></a>
-                            <ul>
-                                <li><a href="#">프로그램</a></li>
-                                <li><a href="#">아카이브</a></li>
-                                <li><a href="#">출판</a></li>
-                                <li><a href="#">영상자료</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>멤버십</span></a>
-                            <ul>
-                                <li><a href="#">가입과 안내</a></li>
-                                <li><a href="#">프로그램과 혜택</a></li>
-                                <li><a href="#">뉴스레터</a></li>
-                                <li><a href="#">멤버십 공지</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>ABOUT</span></a>
-                            <ul>
-                                <li><a href="#">미술관 소개</a></li>
-                                <li><a href="#">방문안내</a></li>
-                                <li><a href="#">공지</a></li>
-                                <li><a href="#">보도자료</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><span>CONTECT</span></a>
-                            <ul>
-                                <li><a href="#">전시예약</a></li>
-                                <li><a href="#">리움호암 셔틀버스예약</a></li>
-                                <li><a href="#">온라인스토어</a></li>
-                                <li><a href="#">법인회원</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="gnb-bg"></div>
-                </nav>
-
                 <div class="btn-box">
                     <div class="leng">
-                        <span>ENG</span><span>KOR</span>
+                        <span class="active">ENG</span><span>KOR</span>
+                        <div><i class="fa-solid fa-arrows-rotate"></i></div>
                     </div>
                     <div class="login">
                         <span>로그인</span>
                     </div>
                 </div>
+                <div>
+                    <nav class="menu-box">
+                        <ul>
+                            <li>
+                                <a href="#"><span>전시</span></a>
+                                <ul>
+                                    <li><a href="#">현대전시</a></li>
+                                    <li><a href="#">예정전시</a></li>
+                                    <li><a href="#">과거전시</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>소장품</span></a>
+                                <ul>
+                                    <li><a href="#">고미술</a></li>
+                                    <li><a href="#">현대미술</a></li>
+                                    <li><a href="#">보존</a></li>
+                                    <li><a href="#">수어해설</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>배움/연구</span></a>
+                                <ul>
+                                    <li><a href="#">프로그램</a></li>
+                                    <li><a href="#">아카이브</a></li>
+                                    <li><a href="#">출판</a></li>
+                                    <li><a href="#">영상자료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>멤버십</span></a>
+                                <ul>
+                                    <li><a href="#">가입과 안내</a></li>
+                                    <li><a href="#">프로그램과 혜택</a></li>
+                                    <li><a href="#">뉴스레터</a></li>
+                                    <li><a href="#">멤버십 공지</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>ABOUT</span></a>
+                                <ul>
+                                    <li><a href="#">미술관 소개</a></li>
+                                    <li><a href="#">방문안내</a></li>
+                                    <li><a href="#">공지</a></li>
+                                    <li><a href="#">보도자료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>CONTECT</span></a>
+                                <ul>
+                                    <li><a href="#">전시예약</a></li>
+                                    <li><a href="#">리움호암 셔틀버스예약</a></li>
+                                    <li><a href="#">온라인스토어</a></li>
+                                    <li><a href="#">법인회원</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="gnb-bg"></div>
+                    </nav>
+                </div>
+
+
             </div>
         </header>
     </div>
 
 
     <style>
+        body {
+            background-color: #333;
+            height:10000px;
+        }
+
+        header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
         .header-inner {
             position: relative;
+            background-color: #fff;
         }
 
         .header-inner>.container {
             max-width: 1920px;
+            min-width: 450px;
             padding: 0 20px;
             width: 100%;
             height: 80px;
-            gap: 40px;
+            gap: 100px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            box-sizing: border-box;
+            margin: 0 auto;
         }
 
         .header-inner .logo-box {
@@ -225,7 +250,7 @@
             top: 100%;
             left: 50%;
             transform: translate(-50%, -50%);
-
+            z-index: 111;
             width: 0px;
             aspect-ratio: 1/1;
             border-radius: 50%;
@@ -253,15 +278,17 @@
             height: 0;
             white-space: nowrap;
             padding-top: 28px;
-            transition: all 0.4s ease;
+
             overflow: hidden;
             opacity: 0;
+            z-index: 11;
         }
 
         .header-inner .menu-box:hover>ul ul {
             display: flex;
             height: 300px;
             opacity: 1;
+            transition: all 0.4s 0.2s ease;
         }
 
         .header-inner .menu-box>ul ul>li {
@@ -299,46 +326,283 @@
             justify-content: flex-end;
             align-items: flex-end;
             width: 100%;
-            height: 300px;
-            border: solid red;
+            height: 0;
+            background-color: #fff;
             position: absolute;
             left: 0;
             top: 100%;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #222;
+        }
+
+        .header-inner .menu-box:hover>.gnb-bg {
+            height: 300px;
+            opacity: 1;
         }
 
         .header-inner .menu-box>.gnb-bg>div {
             width: 120px;
             aspect-ratio: 1/1;
 
-            border: solid green;
-
             position: relative;
+            margin: 20px;
         }
 
         .header-inner .menu-box>.gnb-bg>div>div {
             width: 100%;
             position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-
-            border: solid pink;
-
-            animation-name: logoAni;
-            animation-duration: 1000;
-            ani
+            left: 0;
+            top: 0;
+            animation: logoSpin 5s linear infinite;
         }
 
-        @keyframes logoAni {
-            0% {
-                transform: rotate(0);
+        .header-inner .menu-box>.gnb-bg>div>div:nth-child(1) {
+            animation-duration: 5s;
+        }
+
+        .header-inner .menu-box>.gnb-bg>div>div:nth-child(2) {
+            animation-duration: 5.4s;
+        }
+
+        .header-inner .menu-box>.gnb-bg>div>div:nth-child(3) {
+            animation-duration: 5.8s;
+        }
+
+        .header-inner .menu-box>.gnb-bg>div>div:nth-child(4) {
+            animation-duration: 6.2s;
+        }
+
+        .header-inner .menu-box>.gnb-bg>div>div:nth-child(5) {
+            animation-duration: 6.4s;
+        }
+
+        @keyframes logoSpin {
+            from {
+                transform: rotate(0turn);
             }
 
-            100% {
-                transform: rotate(360deg);
+            to {
+                transform: rotate(1turn);
             }
+        }
+
+        .header-inner .btn-box>div {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .header-inner .btn-box>div:nth-child(1) {
+            margin-right: 20px;
+        }
+
+        .header-inner .btn-box>div:nth-child(1)>span {
+            display: none;
+        }
+
+        .header-inner .btn-box>div:nth-child(1)>span.active {
+            display: block;
+        }
+
+        .header-inner .btn-box>.hbg-box {
+            display: none;
+            font-size: 32px;
+        }
+
+        .side-menu-bar {
+            display: none;
+            width:clamp(450px, 100%, 500px);
+            height: calc(100vh - 80px);
+            position: absolute;
+            right: -500px;
+            top: 80px;
+
+            background-color: #fff;
+            padding: 40px;
+
+            box-sizing: border-box;
+
+            transition: all .4s ease;
+        }
+
+        .side-menu-bar.active {
+            right: 0;
+        }
+
+        .side-menu-bar>div:nth-child(2) {
+            width: 100%;
+            height: 90%;
+            position: relative;
+        }
+
+        .side-menu-bar>div:nth-child(2)::after,
+        .side-menu-bar>div:nth-child(2)::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 10%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to top,
+                    transparent 0%,
+                    rgba(255, 255, 255, 1) 100%);
+        }
+
+        .side-menu-bar>div:nth-child(2)::before {
+            bottom: 0;
+            top: auto;
+
+            background: linear-gradient(to bottom,
+                    transparent 0%,
+                    rgba(255, 255, 255, 1) 100%);
+        }
+
+        .side-menu-bar .menu-box {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .side-menu-bar .menu-box a {
+            display: inline-block;
+        }
+
+        .side-menu-bar .menu-box>ul {
+            padding-top: 60px;
+        }
+
+        .side-menu-bar .menu-box>ul>li {
+            font-size: 48px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul {
+            padding-top: 20px;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul>li {
+            font-size: 30px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul>li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul>li>a {
+            position: relative;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul>li>a:hover {
+            color: #000;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul>li>a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: #999;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+
+            transition: all .4s ease;
+        }
+
+        .side-menu-bar .menu-box>ul>li>ul>li>a:hover::after {
+            width: 100%;
+        }
+
+        .side-menu-bar .btn-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .side-menu-bar .btn-box>div {
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .side-menu-bar .btn-box>.leng {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .side-menu-bar .btn-box>.leng>span {
+            display: none;
+        }
+
+        .side-menu-bar .btn-box>.leng>span.active {
+            display: inline-block;
+        }
+
+        .side-menu-bar .btn-box>.leng>div {
+            display: inline-block;
+            font-size: 16px;
+            color: #333;
+        }
+
+
+        @media (max-width:1000px) {
+
+            html.mo-side-bar-active,
+            html.mo-side-bar-active>body {
+                overflow: hidden;
+            }
+
+            .side-menu-bar {
+                display: block;
+            }
+
+            .header-inner .menu-box,
+            .header-inner .btn-box>.leng,
+            .header-inner .btn-box>.login {
+                display: none;
+            }
+
+            .header-inner .btn-box>.hbg-box {
+                display: block;
+            }
+
+
         }
     </style>
+
+    <script>
+
+        $('.hbg-box').click(function () {
+            sideMenuOpenInit();
+
+            console.log(1);
+        });
+
+        function sideMenuOpenInit() {
+            var $this = $('header .side-menu-bar');
+
+            if ($this.hasClass('active')) {
+                $('header .side-menu-bar').removeClass('active');
+                $('html').removeClass('mo-side-bar-active');
+            } else {
+                $('header .side-menu-bar').addClass('active');
+                $('html').addClass('mo-side-bar-active');
+            }
+        }
+    </script>
 
 </body>
 
