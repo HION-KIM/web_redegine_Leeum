@@ -584,7 +584,6 @@
     </style>
 
     <script>
-
         $('.hbg-box').click(function () {
             sideMenuOpenInit();
 
@@ -602,6 +601,12 @@
                 $('html').addClass('mo-side-bar-active');
             }
         }
+
+        $(window).on('scroll',function(){
+            const scrollTop = $(this).scrollTop();
+
+            console.log(scrollTop);
+        })
     </script>
 
 </body>
