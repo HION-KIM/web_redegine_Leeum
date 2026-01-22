@@ -180,7 +180,7 @@
     <style>
         body {
             background-color: #333;
-            height:10000px;
+            height: 10000px;
         }
 
         header {
@@ -188,6 +188,11 @@
             left: 0;
             top: 0;
             width: 100%;
+            transition: all .4s ease;
+        }
+
+        header.hide {
+            top: -80px;
         }
 
         .header-inner {
@@ -416,7 +421,7 @@
 
         .side-menu-bar {
             display: none;
-            width:clamp(450px, 100%, 500px);
+            width: clamp(450px, 100%, 500px);
             height: calc(100vh - 80px);
             position: absolute;
             right: -500px;
@@ -586,9 +591,12 @@
     <script>
         $('.hbg-box').click(function () {
             sideMenuOpenInit();
-
-            console.log(1);
         });
+
+
+        $('header .leng').click(function () {
+            lengChangeInit();
+        })
 
         function sideMenuOpenInit() {
             var $this = $('header .side-menu-bar');
@@ -602,11 +610,38 @@
             }
         }
 
-        $(window).on('scroll',function(){
-            const scrollTop = $(this).scrollTop();
 
-            console.log(scrollTop);
-        })
+        function lengChangeInit() {
+            var $this = $('.btn-box>.leng');
+
+            $this.find('.active').removeClass('active').siblings('span').addClass('active');
+        }
+
+        function headerHideInit() {
+            let lastScrollTop = 0;
+
+            $(window).on('scroll', function () {
+
+                const scrollTop = $(this).scrollTop();
+                var $header = $('header');
+
+                if (Math.abs(scrollTop - lastScrollTop) <= 100) return;
+
+                if (scrollTop <= 0) {
+                    $header.removeClass('hide');
+                }
+
+                if (scrollTop > lastScrollTop) {
+                    $header.addClass('hide');
+                } else {
+                    $header.removeClass('hide');
+                }
+
+
+                lastScrollTop = scrollTop;
+            });
+        }
+        headerHideInit();
     </script>
 
 </body>
