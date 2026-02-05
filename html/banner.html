@@ -74,14 +74,13 @@
       <section class="sec-2-vision">
         <div class="container">
           <div class="bg-box">
-            <div class="bg-img"></div>
-            <div class="circle-1"><img src="" alt=""></div>
-            <div class="circle-1"><img src="" alt=""></div>
-            <div class="circle-1"><img src="" alt=""></div>
+            <div class="bg-img">
+            </div>
+            <div class="circle-1"><img src="../imgs/circlerotation-1.png" alt="원형 이미지"></div>
+            <div class="circle-2"><img src="../imgs/circlerotation-2.png" alt="원형 이미지"></div>
+            <div class="circle-3"><img src="../imgs/circlerotation-3.png" alt="원형 이미지"></div>
           </div>
-          <div class="content">
-            <div>전통과 현대, 한국과 세계를 잇는 문화의 공간</div>
-          </div>
+          <div>전통과 현대, 한국과 세계를 잇는 문화의 공간</div>
         </div>
       </section>
     </main>
@@ -99,6 +98,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
 
     .sec-1-banner .bg-text {
@@ -179,7 +180,6 @@
     }
 
     .sec-1-banner .content>div:nth-child(1)>div {
-      font-size: 180px;
       font-size: clamp(1px, 9.38vw, 180px);
       font-weight: 700;
       line-height: 80%;
@@ -231,11 +231,16 @@
 
     .sec-2-vision>.container {
       width: 100vw;
-      height: 6000px;
-    }
-    .sec-2-vision>.container
+      height: 100vh;
 
-    @media (max-width:1000px) {
+      outline: 2px solid blue;
+    }
+
+    .sec-2-vision .container .bg-box{
+      height: 100%; width: 100%; background-image: url(../imgs/img-bg-sec2.jpg);
+    }
+
+    /* @media (max-width:1000px) {
       .sec-1-banner>.container {
         display: block;
         padding: 100px 40px;
@@ -270,7 +275,7 @@
       .sec-1-banner .content>div:nth-child(2)>div>span::after {
         margin-right: unset;
       }
-    }
+    } */
   </style>
 
   <script>
@@ -359,16 +364,20 @@
         yPercent: 100,
       }, 0);
 
-    let animatePullDown = gsap.timeline({
+
+    gsap.timeline({
       scrollTrigger: {
-        trigger: ".content",
-        start: "top 20%",
-        end: "+=6000",
-        scrub: true,
+        trigger: ".banner-index-follow",
+        start: 'center center',
+        endTrigger: '.sec-2-vision',
+        end: "center center",
+        scrub: 2,
         markers: true,
         pin: true,
       }
-    });
+    })
+      .to(".banner-index-follow", { "scale": 0.5, })
+      .to(".animate__slideInUp_2", { y: 100 }, { duration: 2 });
 
     // animatePullDown.create({
     //   trigger: ".content",
@@ -377,30 +386,54 @@
     //   toggleClass: "active",
     // });
 
-    animatePullDown.to(".banner-index-follow",
-      {
-        scale: 0.5,
-        yPercent:150,
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".sec-1-banner",
+    //     start: "20% top ",
+    //     end: "bottom top",
+    //     scrub: true,
+    //     // markers: true,
+    //   }
+    // })
+    // .to(".banner-index-follow",
+    //   {
+    //     scale: 0.5,
 
-        scrollTrigger: {
-          trigger: ".banner-index-follow",
-          start: 'top 20%',
-          end: "+=1000",
-          scrub: true,
-          markers:true,
-        },
-      })
-      .to(".animate__slideInUp_2",
-        {
-          y: 100,
+    //     scrollTrigger: {
+    //       trigger: ".banner-index-follow",
+    //       start: 'center center',
+    //       endTrigger:'.sec-2-vision',
+    //       end: "center center",
+    //       scrub: true,
+    //       // markers: true,
+    //       pin:true,
+    //     },
+    //   })
+    //   .to(".animate__slideInUp_2",
+    //     {
+    //       y: 100,
 
-          scrollTrigger: {
-            trigger: ".banner-index-follow",
-            start: 'top 20%',
-            end: "+=500",
-            scrub: 1,
-          },
-        });
+    //       scrollTrigger: {
+    //         trigger: ".banner-index-follow",
+    //         start: 'top 20%',
+    //         end: "+=500",
+    //         scrub: 1,
+    //         markers:true,
+    //       },
+    //     });
+
+    // animatePullDown.create({
+    //   trigger: ".content",
+    //   start: 'top 20%',
+    //   end: '+=1000',
+    //   toggleClass: "active",
+    // });
+
+
+
+
+
+    // ---------------------
     // animatePullDown.to(".content", {
     //   scrollTrigger: {
     //     trigger: ".content",
