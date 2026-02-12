@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sec-3-brand</title>
+  <!-- Script Jquery's JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Script Lodash's JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <!-- Script GSAP's JS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <!-- Link Font Awesome's CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <!-- Link Inner's CSS -->
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <div>
+    <main>
+      <section class="sec-blank"></section>
+
+      <section class="sec-3-brand">
+        <div class="container">
+          <div class="line"></div>
+          <div class="text-box">
+            <div class="text-1">
+              <p>리움미술관은 한국 고유의 미를 담고 있는 전통미술과 생동하는 현대미술, 시대적 가치를 반영한 국제미술이</p>
+            </div>
+            <div class="text-2">
+              <p>함께 공존하는 세계를 향한 열린 미술관입니다. 리움은 과거와 현재를 바탕으로 미래를 함께 모색하고,</p>
+            </div>
+            <div class="text-3">
+              <p>시대와 장르를 초월한 융합미술관으로 관객과 함께 향유하고 소통하는 문화적 공간이 되고자 합니다.</p>
+            </div>
+          </div>
+          <div class="wrap-ev">
+            <div>
+              <div class="text">문화창조</div>
+              <div class="bg-circle bg-circle-1"></div>
+            </div>
+            <div>
+              <div class="text">융합</div>
+              <div class="bg-circle bg-circle-1"></div>
+              <div class="bg-circle bg-circle-2"></div>
+            </div>
+            <div>
+              <div class="text">소통</div>
+              <div class="bg-circle bg-circle-1"></div>
+              <div class="bg-circle bg-circle-2"></div>
+              <div class="bg-circle bg-circle-3"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+      <section class="sec-blank"></section>
+    </main>
+  </div>
+
+  <style>
+    .sec-blank {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .sec-3-brand {
+      overflow-x: hidden;
+    }
+
+    .sec-3-brand .container {
+      width: 100vw;
+      min-width: 450px;
+
+      border: solid red;
+    }
+
+    .sec-3-brand .line {
+      width: 1px;
+      height: 208px;
+      margin: 0 auto;
+      background-color: #000;
+      clip-path: inset(0 0 100% 0);
+    }
+
+    .sec-3-brand .text-box {
+      font-size: clamp(16px, 1.25vw, 24px);
+      font-weight: 400;
+      text-align: center;
+      margin: 44px 0;
+      line-height: 1.6;
+    }
+
+    .sec-3-brand .text-box>div {
+      overflow: hidden;
+    }
+
+    .sec-3-brand .wrap-ev {
+      display: flex;
+      width: clamp(700px, 64vw, 1230px);
+      justify-content: space-between;
+      margin: 0 auto 100px;
+    }
+
+    .sec-3-brand .wrap-ev>div {
+      width: clamp(200px, 18.13vw, 348px);
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .sec-3-brand .wrap-ev .text {
+      font-size: clamp(16px, 1.25vw, 24px);
+      font-weight: 600;
+    }
+
+    .sec-3-brand .wrap-ev .bg-circle {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url(../imgs/circlerotation-1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: invert(1);
+    }
+
+    .sec-3-brand .wrap-ev .bg-circle-2 {
+      background-image: url(../imgs/circlerotation-2.png);
+    }
+
+    .sec-3-brand .wrap-ev .bg-circle-3 {
+      background-image: url(../imgs/circlerotation-3.png);
+    }
+
+    @media (max-width:768px) {
+      .sec-3-brand .text-box {
+        font-size: 18px;
+        padding: 0 40px;
+        box-sizing: border-box;
+      }
+
+      .sec-3-brand .text-box>div {
+        text-align: left;
+      }
+
+      .sec-3-brand .text-box .text-2 {
+        margin: 20px 0;
+      }
+
+      .sec-3-brand .wrap-ev {
+        width: 100vw;
+        min-width: 450px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        margin: 0 auto 100px;
+      }
+    }
+
+    ;
+  </style>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo('.sec-3-brand .bg-circle', { "rotation": "0" }, { "rotation": 360, duration: 7, repeat: -1, ease: "none" });
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".sec-3-brand",
+        start: "top 80%",
+        end: "center center",
+        scrub: 1,
+        markers: true,
+      }
+    })
+      .fromTo(".sec-3-brand .line",
+        { "clipPath": "inset(0% 0% 100% 0%)" },
+        { "clipPath": "inset(0% 0% 0% 0%)", "duration": 2, "ease": "none" })
+      .fromTo(".sec-3-brand .text-box>.text-1 p",
+        { y: 50 }, { y: 0, duration: 1 }, 1)
+      .fromTo(".sec-3-brand .text-box>.text-2 p",
+        { y: 50 }, { y: 0, duration: 1 }, 1.3)
+      .fromTo(".sec-3-brand .text-box>.text-3 p",
+        { y: 50 }, { y: 0, duration: 1 }, 1.6);
+
+  </script>
+</body>
+
+
+</html>
