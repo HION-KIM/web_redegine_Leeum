@@ -73,14 +73,20 @@
       </section>
       <section class="sec-2-vision">
         <div class="container">
-          <div class="bg-box">
-            <div class="bg-img">
+          <div class="index">LEEUM ART Museum</div>
+          <div class="wrap">
+            <div class="text">전통과 현대, 한국과 세계를 잇는 문화의 공간
+              <br><span>LEEUM ART Museum</span>
             </div>
-            <div class="circle-1"><img src="../imgs/circlerotation-1.png" alt="원형 이미지"></div>
-            <div class="circle-2"><img src="../imgs/circlerotation-2.png" alt="원형 이미지"></div>
-            <div class="circle-3"><img src="../imgs/circlerotation-3.png" alt="원형 이미지"></div>
+            <div class="bg-box">
+              <div class="bg-img">
+              </div>
+              <div class="circle circle-1"><img src="../imgs/circlerotation-1.png" alt="원형 이미지"></div>
+              <div class="circle circle-2"><img src="../imgs/circlerotation-2.png" alt="원형 이미지"></div>
+              <div class="circle circle-3"><img src="../imgs/circlerotation-3.png" alt="원형 이미지"></div>
+            </div>
           </div>
-          <div>전통과 현대, 한국과 세계를 잇는 문화의 공간</div>
+
         </div>
       </section>
     </main>
@@ -232,13 +238,74 @@
     .sec-2-vision>.container {
       width: 100vw;
       height: 100vh;
-
-      /* outline: 2px solid blue; */
+      outline: 2px solid blue;
+      position: relative;
     }
 
-    .sec-2-vision .container .bg-box{
-      height: 100%; width: 100%; background-image: url(../imgs/img-bg-sec2.jpg); background-repeat: no-repeat;
-      background-size: cover; background-position: center;
+    .sec-2-vision .container .index {
+      font-size: clamp(1px, 4.69vw, 90px);
+      font-weight: 700;
+      color: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      opacity: 0;
+    }
+
+    .sec-2-vision .container .wrap {
+      width: 100%;
+      height: 100%;
+      clip-path: circle(0%);
+      position: relative;
+    }
+
+    .sec-2-vision .container .wrap .text {
+      color: #fff;
+      font-weight: 700;
+      font-size: clamp(1px, 2.08vw, 40px);
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .sec-2-vision .container .wrap .text span {
+      font-size: clamp(1px, 4.69vw, 90px);
+      font-weight: 700;
+    }
+
+
+    .sec-2-vision .container .wrap .bg-box {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    .sec-2-vision .container .wrap .bg-box .bg-img {
+      width: 100%;
+      height: 100%;
+      background-image: url(../imgs/img-bg-sec2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -5;
+    }
+
+    .sec-2-vision .wrap .bg-box .circle {
+      width: clamp(1px, 66.51vw, 1277px);
+      aspect-ratio: 1/1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -4;
     }
 
     /* @media (max-width:1000px) {
@@ -372,92 +439,46 @@
         start: 'center center',
         endTrigger: '.sec-2-vision',
         end: "center center",
-        scrub: 2,
-        markers: true,
+        scrub: 1,
+        // markers: true,
         pin: true,
       }
     })
       .to(".banner-index-follow", { "scale": 0.5, })
       .to(".animate__slideInUp_2", { y: 100 }, { duration: 2 });
 
-    // animatePullDown.create({
-    //   trigger: ".content",
-    //   start: 'top 20%',
-    //   end: '+=1000',
-    //   toggleClass: "active",
-    // });
+    function sec2CircleAni() {
+      var $this = $('.sec-2-vision .bg-box .circle');
+      gsap.fromTo($this, { "rotation": "0", xPercent: -50, yPercent: -50 }, { "rotation": 360, xPercent: -50, yPercent: -50, duration: 7, repeat: -1, ease: "none" });
+    }
 
-    // gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".sec-1-banner",
-    //     start: "20% top ",
-    //     end: "bottom top",
-    //     scrub: true,
-    //     // markers: true,
-    //   }
-    // })
-    // .to(".banner-index-follow",
-    //   {
-    //     scale: 0.5,
+    function sec2InitAni() {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".sec-2-vision",
+          start: "top top",
+          end: "+=200%",
+          markers: true,
+          scrub: 1,
+          pin: true,
+        }
+      })
+        .to(".sec-2-vision .container .wrap", { "clip-path": "circle(100%)", "duration":6, "delay":1 });
 
-    //     scrollTrigger: {
-    //       trigger: ".banner-index-follow",
-    //       start: 'center center',
-    //       endTrigger:'.sec-2-vision',
-    //       end: "center center",
-    //       scrub: true,
-    //       // markers: true,
-    //       pin:true,
-    //     },
-    //   })
-    //   .to(".animate__slideInUp_2",
-    //     {
-    //       y: 100,
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".sec-2-vision",
+          start: "top top",
+          end: "top top",
+          scrub:true,
+        }
+      })
+        .to(".sec-2-vision .container .index", { "opacity": "1", duration: 0.001 })
+        .to(".banner-index-follow", { "opacity": "0", duration: 0.001 }, "<")
+    }
 
-    //       scrollTrigger: {
-    //         trigger: ".banner-index-follow",
-    //         start: 'top 20%',
-    //         end: "+=500",
-    //         scrub: 1,
-    //         markers:true,
-    //       },
-    //     });
-
-    // animatePullDown.create({
-    //   trigger: ".content",
-    //   start: 'top 20%',
-    //   end: '+=1000',
-    //   toggleClass: "active",
-    // });
-
-
-
-
-
-    // ---------------------
-    // animatePullDown.to(".content", {
-    //   scrollTrigger: {
-    //     trigger: ".content",
-    //     start: 'top 40%',
-    //     end: "+=1000",
-    //     scrub: 1,
-    //     markers: true,
-    //     pin: true,
-    //   },
-    //   scale: 0.5,
-    // })
-    // .to('.animate__slideInUp_2', {
-    //   scrollTrigger: {
-    //     trigger: ".content",
-    //     start: 'top 20%',
-    //     end: "+=300",
-    //     scrub: 1,
-    //   },
-
-    //   y: 100,
-    // });
-
-
+    sec2CircleAni();
+    sec2InitAni();
   </script>
 </body>
 
