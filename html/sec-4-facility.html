@@ -26,41 +26,43 @@
         <div class="container">
           <div class="exhibition-hall exhibition-hall-1">
             <h1>Exhibition Space</h1>
-            <div>
+            <div class="text">
               리움미술관은 한강이 내려다보이는 남산 자락에 배산임수(背山臨水)의 지세를 지닌 한남동에 자리하고 있습니다. 건축 설계는 세계적인 건축가, 마리오 보타, 장 누벨, 렘 쿨하스, 세 사람이
               맡았습니다. 하나의 미술관을 위해 각기 개성이 다른 우리 시대 최고의 건축가들이 모인 것은 세계 속에서도 그 예가 드문 역사적 사건입니다. 이 세 사람은 그 디자인의 독특함과 도시 문화를
               해석하는 참신한 시각으로 세계적 명성을 얻은 건축 가들입니다. 각기 강렬한 건축적 개성이 조화를 이루어 낸 리움미술관은 그 건축물들 자체로 현대 건축의 주목할 만한 세계적 컬렉션입니다.
-              <div>
-                리움미술관은 한강이 내려다보이는 남산 자락에 배산임수(背山臨水)의 지세를 지닌 한남동에 자리하고 있습니다. 건축 설계는 세계적인 건축가, 마리오 보타, 장 누벨, 렘 쿨하스, 세 사람이
-                맡았습니다. 하나의 미술관을 위해 각기 개성이 다른 우리 시대 최고의 건축가들이 모인 것은 세계 속에서도 그 예가 드문 역사적 사건입니다. 이 세 사람은 그 디자인의 독특함과 도시 문화를
-                해석하는 참신한 시각으로 세계적 명성을 얻은 건축 가들입니다. 각기 강렬한 건축적 개성이 조화를 이루어 낸 리움미술관은 그 건축물들 자체로 현대 건축의 주목할 만한 세계적 컬렉션입니다.
-              </div>
             </div>
             <div class="bg-img"></div>
           </div>
 
           <div class="exhibition-hall exhibition-hall-2">
             <div class="img-box">
-              <img src="" alt="">
+              <img src="../imgs/img_exhibition_M1_1.jpg" alt="전시관이미지">
+              <img src="../imgs/img_exhibition_M1_2.jpg" alt="전시관이미지">
+              <img src="../imgs/img_exhibition_M1_3.jpg" alt="전시관이미지">
             </div>
             <div class="content">
               <h1>M1 Exhibition Hall</h1>
-              <div>리움 미술관 M1 전시관은 한국 전통미술을 집약한 공간으로, 고려청자와 조선백자, 불교미술, 회화 등 국보급 작품을 소장하고 있다. 고려청자는 세련된 귀족 문화의 아름다움을,
+              <div class="text">리움 미술관 M1 전시관은 한국 전통미술을 집약한 공간으로, 고려청자와 조선백자, 불교미술, 회화 등 국보급 작품을 소장하고 있다. 고려청자는 세련된 귀족
+                문화의 아름다움을,
                 조선백자는
                 절제된 미학을, 불교미술은 깊은 신앙과 정신세계를, 회화는 한국 회화 전통의 흐름을 보여준다. 이곳에서 관람객은 한국미술사의 정수를 한자리에서 감상할 수 있다.</div>
             </div>
           </div>
 
           <div class="exhibition-hall exhibition-hall-3">
-            <div class="img-box">
-              <img src="" alt="">
-            </div>
+
             <div class="content">
               <h1>M2 Exhibition Hall</h1>
-              <div>리움 미술관 M2 전시관은 세계 현대미술과 한국 현대미술을 함께 보여주는 공간이다. 앤디 워홀, 프란시스 베이컨, 로이 리히텐슈타인 같은 세계 거장들의 작품과 백남준, 이불 등 한국
+              <div class="text">리움 미술관 M2 전시관은 세계 현대미술과 한국 현대미술을 함께 보여주는 공간이다. 앤디 워홀, 프란시스 베이컨, 로이 리히텐슈타인 같은 세계 거장들의 작품과
+                백남준, 이불 등 한국
                 대표 작가의 작품이 전시되어 있다. 다양한 매체와 실험적 표현을 통해 20세기 이후 미술의 흐름을 한눈에 살펴볼 수 있으며, 국제적인 현대미술과 한국 현대미술이 서로 대화하는 장을 경험할
                 수 있다.
               </div>
+            </div>
+            <div class="img-box">
+              <img src="../imgs/img_exhibition_M2_1.jpg" alt="전시관이미지">
+              <img src="../imgs/img_exhibition_M2_2.jpg" alt="전시관이미지">
+              <img src="../imgs/img_exhibition_M2_3.jpg" alt="전시관이미지">
             </div>
           </div>
       </section>
@@ -79,18 +81,103 @@
       width: 100vw;
     }
 
-    .sec-4-facility .container>.exhibition-hall{
-      height:100vh;
-    }
-
-    .sec-4-facility .container>.exhibition-hall h1{
-      font-size: 80px;
-      font-weight: 600;
-    }
-
-    .sec-4-facility .container>.exhibition-hall-1{
-      padding:246px 180px;
+    .sec-4-facility .container>.exhibition-hall {
+      height: 100vh;
+      background-color: #000;
+      padding: 0 9.38vw;
       box-sizing: border-box;
+    }
+
+    .sec-4-facility .container>.exhibition-hall h1 {
+      font-size: clamp(48px, 4.17vw, 80px);
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .sec-4-facility .container>.exhibition-hall .text {
+      font-size: clamp(14px, 1.04vw, 20px);
+      font-weight: 400;
+      line-height: 1.6;
+      color: #fff;
+      text-align: justify;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-1 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background-color: unset;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-1 .bg-img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url(../imgs/img_exhibition_1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: brightness(0.3) grayscale(1);
+    }
+
+    .sec-4-facility .container>.exhibition-hall-1 h1 {
+      margin-bottom: clamp(40px, 9.38vw, 180px);
+      border: solid red;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-1 .text {
+      border: solid red;
+      width: 50%;
+      align-self: flex-end;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-2,
+    .sec-4-facility .container>.exhibition-hall-3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+
+    .sec-4-facility .container>.exhibition-hall-2 .img-box,
+    .sec-4-facility .container>.exhibition-hall-3 .img-box {
+      width: 31.25vw;
+      position: relative;
+      aspect-ratio: 600/790;
+      overflow: hidden;
+      border: solid red;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-2 .img-box img,
+    .sec-4-facility .container>.exhibition-hall-3 .img-box img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-2 .content,
+    .sec-4-facility .container>.exhibition-hall-3 .content {
+      width: 50%;
+      border: solid red;
+    }
+
+    .sec-4-facility .container>.exhibition-hall-2 .content h1,
+    .sec-4-facility .container>.exhibition-hall-3 .content h1 {
+      margin-bottom: clamp(80px, 13.02vw, 250px);
+    }
+
+    @media (max-width:768px) {
+      .sec-4-facility .container>.exhibition-hall {
+        justify-content: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 
